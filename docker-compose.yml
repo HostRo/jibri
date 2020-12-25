@@ -1,0 +1,23 @@
+version: '3'
+services:
+  Jibri:
+    build: .
+    ports:
+     - "5222"
+  environment:
+    XMPP_AUTH_DOMAIN=auth.webmeeting.worldconnect.in
+    XMPP_INTERNAL_MUC_DOMAIN=internal.auth.webmeeting.worldconnect.in
+    XMPP_RECORDER_DOMAIN=recorder.webmeeting.worldconnect.in
+    XMPP_SERVER=webmeeting.worldconnect.in
+    XMPP_DOMAIN=webmeeting.worldconnect.in
+    JIBRI_XMPP_USER=jibri
+    JIBRI_XMPP_PASSWORD=670A753E993F63F333D893CAA81EF96D
+    JIBRI_BREWERY_MUC=jibribrewery
+    JIBRI_RECORDER_USER=recorder
+    JIBRI_RECORDER_PASSWORD=670A753E993F63F333D893CAA81EF96D
+    JIBRI_RECORDING_DIR=/config/recordings
+    JIBRI_FINALIZE_RECORDING_SCRIPT_PATH=/config/finalize.sh
+    JIBRI_STRIP_DOMAIN_JID=conference
+    JIBRI_LOGS_DIR=/config/logs
+
+DISPLAY=:0=
