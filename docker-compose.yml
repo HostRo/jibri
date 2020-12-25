@@ -28,4 +28,4 @@ services:
           - JIBRI_STRIP_DOMAIN_JID=conference
           - JIBRI_LOGS_DIR
           - DISPLAY=:0
-          - TZ
+          - TZ   
